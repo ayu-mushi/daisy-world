@@ -1,0 +1,9 @@
+C:\Documents and Settings\原清隆\Local Settings\Application Data\Temporary Projects\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Documents and Settings\原清隆\Local Settings\Application Data\Temporary Projects\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Documents and Settings\原清隆\Local Settings\Application Data\Temporary Projects\ConsoleApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\原清隆\Local Settings\Application Data\Temporary Projects\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.exe
+C:\Documents and Settings\原清隆\Local Settings\Application Data\Temporary Projects\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.pdb
+C:\Users\Guest\Desktop\daisyworld\daisyworld\bin\Debug\daisyworld.exe
+C:\Users\Guest\Desktop\daisyworld\daisyworld\bin\Debug\daisyworld.pdb
+C:\Users\Guest\Desktop\daisyworld\daisyworld\obj\x86\Debug\daisyworld.exe
+C:\Users\Guest\Desktop\daisyworld\daisyworld\obj\x86\Debug\daisyworld.pdb
