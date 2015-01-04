@@ -34,7 +34,7 @@ namespace daisyworld
         }
         public bool is_nows_the_time_to_retire() //もう寿命?
         {
-            return age <= max_age;
+            return age => max_age;
         }
        
         public Livingthing getchild(Random r)
