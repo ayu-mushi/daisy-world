@@ -53,7 +53,7 @@ namespace daisyworld
                     wall = 0;
                     if (factor < (wall += start_p_bdaisies))
                     {
-                        m_daisyworld[i][j].l = new bdaisy();
+						m_daisyworld[i][j].l = new bdaisy();
                     }
                     else if (factor < (wall += start_p_wdaisies))
                     {
@@ -151,7 +151,7 @@ namespace daisyworld
         {
 			Livingthing[] firsts = new Livingthing[N];
             Patch p;
-			int x=0;
+			int x = 0;
             for (int i = 0; i != n; i++)
             {
                 for (int j = 0; j != m; j++)

@@ -12,8 +12,7 @@ namespace daisyworld
         void invasive(Daisyworld dw1, Daisyworld dw2, int n)
         {
             Livingthing[] ls = dw1.getFirsts(n);
-
-            for (int i = 0; i != n; i++)
+			if(ls != null) for (int i = 0; i != n; i++)
             {
                 ls[i].marker = "invader";
                 dw2.setMarker(new string[]{"invader"});
@@ -53,7 +52,7 @@ namespace daisyworld
                 dws[i + (dws.Length / 2)].refresh(100);
                 bestofpopulation[i + (dws.Length / 2)] = maxval(dws[i + (dws.Length / 2)].populations[0]);
             }
-            using (StreamWriter w = new StreamWriter(@"C:\Documents and Settings\Guest\My Documents\daisyresult.txt")) 
+            using (StreamWriter w = new StreamWriter(@"daisyresult.txt")) 
             {
                 for (int i = dws.Length/2; i != dws.Length; i++) {
                     foreach(int p in dws[i].populations[0].Values)

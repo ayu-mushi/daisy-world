@@ -10,8 +10,8 @@ namespace daisyworld
         double albedo_of_adam; //初期色。値の変異は「アダムの値」から揺らぎすぎる事は無いようにする
 
         public double albedo; //色素を作るには資源を使わなければならない。色素無しなら0.5、grayとなる
-        int max_age;
-        int age;
+        public int max_age;
+        public int age;
         public int number; // 生物nである.
         protected double[] vs_livingthing_interaction_of_adam;
         public double[] vs_livingthing_interaction; //対生物相互作用: 周りに生物nが居るとき一定確率で寿命UP [-0.5,+0.5]
@@ -20,13 +20,13 @@ namespace daisyworld
 
         public Livingthing()
         {
-            age = 0;
-        }
+        	reset_age();
+		}
         public void reset_age() {
             age = 0;
         }
         public void getYouger() { //わかがえる
-            age--;
+			age--;
         }
         public void happy_birthday() //としをとる
         {
@@ -34,7 +34,7 @@ namespace daisyworld
         }
         public bool is_nows_the_time_to_retire() //もう寿命?
         {
-            return age => max_age;
+            return age >= max_age;
         }
        
         public Livingthing getchild(Random r)
@@ -103,49 +103,49 @@ namespace daisyworld
     class wdaisy : Livingthing
     {
         public double albedo_of_adam = 0.75;
-        public int max_age = 25;
         public wdaisy()
         {
-            vs_livingthing_interaction_of_adam = new double[] { 0, 0.75, -0.5, 0.5 };
+            vs_livingthing_interaction_of_adam = new double[] { 0, 0, -0.5, 0 };
             number = 0;
             albedo = albedo_of_adam;
             vs_livingthing_interaction = vs_livingthing_interaction_of_adam;
-        }    
+			max_age = 25;
+        } 
     }
     class bdaisy : Livingthing
     {
         public double albedo_of_adam = 0.25;
-        public int max_age = 25;
         public bdaisy() 
         {
-            vs_livingthing_interaction_of_adam = new double[] { 0, 0.75, -0.5, 0.5 };
+            vs_livingthing_interaction_of_adam = new double[] { 0, 0, -0.5, 0 };
             number = 1;
             albedo = albedo_of_adam;
             vs_livingthing_interaction = vs_livingthing_interaction_of_adam;
+			max_age = 25;
         }
     }
     class rabbit : Livingthing 
     {
         public double albedo_of_adam = 0.5; // gray
-        public int max_age = 10;
         public rabbit()
         {
             vs_livingthing_interaction_of_adam = new double[] { 0.5, 0.5, 0.5, -0.5 };
             number = 2;
             albedo = albedo_of_adam;
             vs_livingthing_interaction = vs_livingthing_interaction_of_adam;
+        	max_age = 10;
         }
     }
     class fox : Livingthing
     {
         public double albedo_of_adam = 0.5; // gray
-        public int max_age = 10;
         public fox()
         {
             vs_livingthing_interaction_of_adam = new double[] { 0, 0, 0.7, 0.3 };
             number = 3;
             albedo = albedo_of_adam;
             vs_livingthing_interaction = vs_livingthing_interaction_of_adam;
+        	max_age = 10;
         }
     }
 }
